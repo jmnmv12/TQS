@@ -2,6 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b154c353-853b-4249-861e-d9f3eaa52ed6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../LAB2/GPS/src/main/java/GPS/Address.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../LAB2/GPS/src/main/java/GPS/AddressResolver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../LAB2/GPS/src/main/java/GPS/TqsBasicHttpClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../LAB2/GPS/src/main/java/GPS/TqsHttpClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../LAB2/GPS/src/test/java/GPS/AddressResolverTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../LAB2/GPS/src/test/java/GPS/AddressResolverTestIT.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../LAB2/Stock/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../LAB2/Stock/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../LAB2/Stock/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../LAB2/Stock/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../LAB2/Stock/Stack.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../LAB2/Stock/src/main/java/Stock/IStockMarket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../LAB2/Stock/src/main/java/Stock/Stock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../LAB2/Stock/src/test/java/Stock/StocksPortfolioTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tqs_labs_euromillion_unit" beforeDir="false" afterPath="$PROJECT_DIR$/tqs_labs_euromillion_unit" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tqs_labs_euromillion_unit/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tqs_labs_euromillion_unit/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tqs_labs_euromillion_unit/src/main/java/euromillions/Dip.java" beforeDir="false" afterPath="$PROJECT_DIR$/tqs_labs_euromillion_unit/src/main/java/euromillions/Dip.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tqs_labs_euromillion_unit/src/main/java/euromillions/EuromillionsDraw.java" beforeDir="false" afterPath="$PROJECT_DIR$/tqs_labs_euromillion_unit/src/main/java/euromillions/EuromillionsDraw.java" afterDir="false" />
@@ -26,6 +43,9 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -52,8 +72,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581681677807</updated>
+      <workItem from="1582809076526" duration="662000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
     <state x="834" y="444" width="308" height="216" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1581789450510">
