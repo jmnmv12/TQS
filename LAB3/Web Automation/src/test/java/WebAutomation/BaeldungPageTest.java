@@ -8,7 +8,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.hamcrest.core.Is.is;
 
-class BaeldungHomePageTest {
+class BaeldungPageTest {
 
     private SeleniumConfig config;
     BaeldungHomePage homePage ;

@@ -31,6 +31,7 @@ public class RedmineloginTest {
 
   @BeforeEach
   public void setUp() {
+
     System.setProperty("webdriver.gecko.driver", "/home/joao/Documents/geckodriver");
 
     driver = new FirefoxDriver();
