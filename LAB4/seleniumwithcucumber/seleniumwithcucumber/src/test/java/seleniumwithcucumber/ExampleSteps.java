@@ -1,6 +1,7 @@
 package seleniumwithcucumber;
 
 import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.BeforeStep;
 import io.cucumber.java.Scenario;
 import org.junit.jupiter.api.BeforeEach;
@@ -17,20 +18,22 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 import java.util.HashMap;
+import java.util.Properties;
 
 public class ExampleSteps {
-    private WebDriver driver ; // Change sustem property 
 
-    @BeforeStep
-    public void doSomethingBeforeStep(Scenario scenario){
+    private WebDriver driver = null;
+
+
+    @Before()
+    public void initialize(){
         System.setProperty("webdriver.gecko.driver", "/home/joao/Documents/geckodriver");
-        driver=new FirefoxDriver();
-    }
 
+        this.driver=new FirefoxDriver();
+    }
 
     @Given("I am on the Google search page")
     public void I_visit_google() {
-
         driver.get("https:\\www.google.com");
     }
 
