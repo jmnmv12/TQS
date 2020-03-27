@@ -17,8 +17,7 @@ class CarRepositoryTest {
     @Autowired
     private TestEntityManager entityManager;
 
-    @Resource
-    @Qualifier("CarRepository")
+    @Autowired
     private CarRepository carRepository;
 
     @Test

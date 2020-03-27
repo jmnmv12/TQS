@@ -1,4 +1,5 @@
 package com.tqsLab5.CarInformationSystem;
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -6,7 +7,10 @@ import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabas
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
+import org.springframework.boot.test.web.client.TestRestTemplate;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.test.web.servlet.MockMvc;
 import com.tqsLab5.CarInformationSystem.CarInformationSystemApplication;
 
@@ -29,15 +33,18 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 public class CarRestControllerIT {
 
     @Autowired
-    private MockMvc mvc;
+    private MockMvc mvc; // It has direct access to our api, so in integration tests is more correct to use TestRestTemplate
 
     @Autowired
     private CarRepository repository;
 
+    @Autowired
+    private TestRestTemplate restClient; // External REST client
+
     @AfterEach
     public void resetDb() {
         repository.deleteAll();
-    }
+    } // Erase all in the end because we are using a memory db only for tests
 
 
     @Test
@@ -45,12 +52,19 @@ public class CarRestControllerIT {
         Car ford = new Car("mustang", "Ford");
         repository.saveAndFlush(ford);
 
-        mvc.perform(get("/api/cars/mustang").contentType(MediaType.APPLICATION_JSON))
+        /*mvc.perform(get("/api/cars/mustang").contentType(MediaType.APPLICATION_JSON))
                 .andDo(print())
                 .andExpect(status().isOk())
                 .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.name", is(ford.getName())))
-                .andExpect(jsonPath("$.maker", is(ford.getMaker())));
+                .andExpect(jsonPath("$.maker", is(ford.getMaker())));*/
+
+        // Another option is to use a real Http rest client and not a MockMvc
+
+        ResponseEntity<Car> entity = restClient.getForEntity("/api/cars/mustang", Car.class);
+
+        assertThat(entity.getStatusCode()).isEqualTo(HttpStatus.OK);
+        assertThat(entity.getBody().getName()).isEqualTo("mustang");
     }
 
 

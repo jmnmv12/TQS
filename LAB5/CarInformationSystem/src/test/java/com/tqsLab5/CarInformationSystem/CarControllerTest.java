@@ -34,9 +34,7 @@ class CarControllerTest {
 
     @Test
     public void givenCar_whenGetCars_thenReturnJsonArray() throws Exception {
-        Car ford = new Car("mustang","Ford");
         Car tesla = new Car("modelY","Tesla");
-        Car renault = new Car("clio","Renault");
 
         given(service.getCarDetails("modelY")).willReturn(tesla);
 
